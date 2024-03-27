@@ -1,19 +1,31 @@
-print("Calculadora \nDigite 2 números: ")
-numero1 = float(input("número 1: "))
-numero2 = float(input("número 2: "))
-print("Legenda de operações: \n1-soma \n2-subtração \n3-multiplicação \n4-divisão \n5-sair da calculadora")
-operacao = int(input("Escolha uma ação: "))
-if operacao == 1:
-    soma = numero1 + numero2
-    print(f"A operação feita foi: {numero1} + {numero2} = {soma} ")
-if operacao == 2:
-    subtracao = numero1 - numero2
-    print(f"A operação feita foi: {numero1} - {numero2} = {subtracao}")
-if operacao == 3:
-    multiplicacao = numero1 * numero2
-    print(f"A operação feita foi: {numero1} * {numero2} = {multiplicacao}")
-if operacao == 4:
-    divisao = numero1 / numero2
-    print(f"A operação feita foi: {numero1} / {numero2} = {divisao}")
-if operacao == 5:
-    print("O usuário desligou a calculadora.")
+cont = 0
+while cont == 0:
+    print(f"----calculadora---- \nEscolha uma operação\n1 - soma\n2 - subtração\n3 - multiplicação\n4 - divisão\n5 - sair")
+    operacao = int(input("Selecione uma operação: "))   
+    if operacao < 1 or operacao > 5:
+        print("ERRO")
+        continue
+    else:
+        if operacao == 1:
+            numero1 = float(input("Escolha um número: "))
+            numero2 = float(input("Escolha outro número: "))
+            x = numero1 + numero2 
+            print(f"A operação foi soma: {numero1} + {numero2} = {x}")
+        elif operacao == 2:
+            numero1 = float(input("Escolha um número: "))
+            numero2 = float(input("Escolha outro número: "))
+            x = numero1 - numero2
+            print(f"A operação foi subtração: {numero1} - {numero2} = {x}")
+        elif operacao == 3:
+            numero1 = float(input("Escolha um número: "))
+            numero2 = float(input("Escolha outro número: "))
+            x = numero1 * numero2
+            print(f"A operação feita foi {numero1} x {numero2} = {x}")
+        elif operacao == 4:
+            numero1 = float(input("Escolha um número: "))
+            numero2 = float(input("Escolha outro número: "))
+            x = numero1/numero2
+            print(f"A operação feita foi {numero1} / {numero2} = {x}")
+        elif operacao == 5:
+            cont = 5
+print("O usuário desligou a calculadora.")
